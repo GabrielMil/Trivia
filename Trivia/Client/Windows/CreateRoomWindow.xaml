@@ -1,0 +1,64 @@
+﻿<Window x:Class="Client.Windows.CreateRoomWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Client.Windows"
+        mc:Ignorable="d"
+        Title="CreateRoomWindow" Height="700" Width="850"
+        WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/Windows/background blue digital.jpg"></ImageBrush>
+        </Grid.Background>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width=".5*"></ColumnDefinition>
+            <ColumnDefinition Width="2*"></ColumnDefinition>
+            <ColumnDefinition Width=".5*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="70"></RowDefinition>
+            <RowDefinition Height="3*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <TextBlock x:Name="txtUsername" Margin="5" TextWrapping="Wrap" HorizontalAlignment="Left" FontSize="20" Foreground="AliceBlue"></TextBlock>
+        <Button x:Name="btnBack" Grid.Column="2" Margin="0,10,10,0" FontSize="25" Content="Back" FontWeight="DemiBold" HorizontalAlignment="Right" HorizontalContentAlignment="Center" VerticalAlignment="Top" Padding="7,3,7,3" Height="39" Width="93" FlowDirection="RightToLeft" Foreground="#FF0211A4" Click="btnBack_Click" />
+
+        <Grid x:Name="gridLogin" Grid.Row="1" Height="Auto" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.ColumnSpan="3" Width="796">
+            <Grid.Background>
+                <SolidColorBrush Color="Azure"></SolidColorBrush>
+            </Grid.Background>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="3*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="15"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="15"></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <TextBlock Text="Room Name:" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Britannic Bold" FontWeight="DemiBold" FontSize="20"></TextBlock>
+            <TextBox x:Name="txtRoomName" Grid.Row="1" Grid.Column="1" Margin="10,0,10,0" Text="Cool Room" VerticalAlignment="Center" Height="24"/>
+
+            <TextBlock Text="Number of Players:" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Britannic Bold" FontWeight="DemiBold" FontSize="20"></TextBlock>
+            <TextBox x:Name="txtNumberOfPlayers" Grid.Row="2" Grid.Column="1" Margin="10,0,10,0" Text="3" VerticalAlignment="Center" Height="28" VerticalContentAlignment="Center"/>
+
+            <TextBlock Text="Number of Questions:" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Britannic Bold" FontWeight="DemiBold" FontSize="20"></TextBlock>
+            <TextBox x:Name="txtNumberOfQuestions" Grid.Row="3" Grid.Column="1" Margin="10,0,10,0" Text="5" VerticalAlignment="Center" Height="28" VerticalContentAlignment="Center"/>
+
+            <TextBlock Text="Time for Question:" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Britannic Bold" FontWeight="DemiBold" FontSize="20"></TextBlock>
+            <TextBox x:Name="txtTimeForQuestion" Grid.Row="4" Grid.Column="1" Margin="10,0,10,0" Text="4" VerticalAlignment="Center" Height="28" VerticalContentAlignment="Center"/>
+
+            <TextBlock x:Name="txtErrCreateRoom" Grid.Column="1" Grid.Row="5" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="15" Foreground="Red"></TextBlock>
+        </Grid>
+
+        <Button x:Name="btnCreateRoom" Content="Create Room" Grid.Column="1" Grid.Row="3" Margin="165,7,165,17" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Britannic Bold" FontSize="24" Width="226" Height="47" Click="btnCreateRoom_Click"/>
+    </Grid>
+</Window>

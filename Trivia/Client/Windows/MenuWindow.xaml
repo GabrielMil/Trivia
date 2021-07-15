@@ -1,0 +1,43 @@
+﻿<Window x:Class="Client.Windows.MenuWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Client.Windows"
+        mc:Ignorable="d"
+        Title="Menu" Height="700" Width="850"
+        WindowStartupLocation="CenterScreen">
+    <Grid x:Name="gridMain">
+        <Grid.Background>
+            <ImageBrush ImageSource="/Windows/background blue digital.jpg"></ImageBrush>
+        </Grid.Background>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width=".5*"></ColumnDefinition>
+            <ColumnDefinition Width="2*"></ColumnDefinition>
+            <ColumnDefinition Width=".5*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="70"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <TextBlock x:Name="txtUsername" Margin="5" TextWrapping="Wrap" HorizontalAlignment="Left" FontSize="20" Foreground="AliceBlue"></TextBlock>
+
+        <TextBlock x:Name="txtHelloUser" Grid.Column="1" Grid.Row="1" FontSize="28" VerticalAlignment="Center" TextWrapping="Wrap" HorizontalAlignment="Center" Background="White" FontWeight="DemiBold"></TextBlock>
+
+        <Button x:Name="btnSignout" Content="Sign Out" Grid.Column="1" Grid.Row="2" Margin="165,7,165,17" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Britannic Bold" FontSize="24" Width="226" Height="47" Click="btnSignout_Click"/>
+        <Button x:Name="btnJoinRoom" Content="Join Room" Grid.Column="1" Grid.Row="3" Margin="165,7,165,17" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Britannic Bold" FontSize="24" Width="226" Height="47" Click="btnJoinRoom_Click"/>
+        <Button x:Name="btnCreateRoom" Content="Create Room" Grid.Column="1" Grid.Row="4" Margin="165,7,165,17" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Britannic Bold" FontSize="24" Width="226" Height="47" Click="btnCreateRoom_Click"/>
+        <Button x:Name="btnMyStatus" Content="My Status" Grid.Column="1" Grid.Row="5" Margin="165,7,165,17" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Britannic Bold" FontSize="24" Width="226" Height="47" Click="btnMyStatus_Click"/>
+        <Button x:Name="btnBestScores" Content="Best Scores" Grid.Column="1" Grid.Row="6" Margin="165,7,165,17" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Britannic Bold" FontSize="24" Width="226" Height="47" Click="btnBestScores_Click"/>
+        <Button x:Name="btnAddQuestion" Content="Add Question" Grid.Column="1" Grid.Row="7" Margin="165,7,165,17" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Britannic Bold" FontSize="24" Width="226" Height="47" Click="btnAddQuestion_Click"/>
+        <Button x:Name="btnQuit" Grid.Column="1" Grid.Row="8" Margin="0,10,10,0" FontSize="25" Content="Quit" FontWeight="DemiBold" HorizontalAlignment="Center" HorizontalContentAlignment="Center" VerticalAlignment="Top" Padding="7,3,7,3" Height="39" Width="93" FlowDirection="RightToLeft" Foreground="#FF0211A4" Click="btnQuit_Click" />
+    </Grid>
+</Window>

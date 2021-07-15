@@ -1,0 +1,46 @@
+﻿<Window x:Class="Client.Windows.JoinRoomWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Client.Windows"
+        mc:Ignorable="d"
+        Title="JoinRoomWindow" Height="700" Width="850"
+        WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/Windows/background blue digital.jpg"></ImageBrush>
+        </Grid.Background>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width=".5*"></ColumnDefinition>
+            <ColumnDefinition Width="2*"></ColumnDefinition>
+            <ColumnDefinition Width=".5*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="70"></RowDefinition>
+            <RowDefinition Height="3*"></RowDefinition>
+            <RowDefinition Height=".5*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <TextBlock x:Name="txtUsername" Margin="5" TextWrapping="Wrap" HorizontalAlignment="Left" FontSize="20" Foreground="AliceBlue"></TextBlock>
+        <Button x:Name="btnBack" Grid.Column="2" Margin="0,10,10,0" FontSize="25" Content="Back" FontWeight="DemiBold" HorizontalAlignment="Right" HorizontalContentAlignment="Center" VerticalAlignment="Top" Padding="7,3,7,3" Height="39" Width="93" FlowDirection="RightToLeft" Foreground="#FF0211A4" Click="btnBack_Click" />
+        <StackPanel x:Name="mainStack" Grid.Column="1" Grid.Row="1" Background="White">
+            <TextBlock Text="Rooms List" Margin="10" FontSize="30" VerticalAlignment="Center" HorizontalAlignment="Center" TextWrapping="Wrap" FontFamily="Britannic Bold" FontWeight="Bold"></TextBlock>
+            <ListBox x:Name="lstRooms" Width="500" MinHeight="60" MaxHeight="150">
+            </ListBox>
+            <TextBlock Text="Selected Room Players:" Margin="10" FontSize="30" VerticalAlignment="Center" HorizontalAlignment="Center" TextWrapping="Wrap" FontFamily="Britannic Bold" FontWeight="Bold"></TextBlock>
+            <ListBox x:Name="lstPlayers" Width="500" MinHeight="60" MaxHeight="120">
+            </ListBox>
+            <TextBlock x:Name="txtErrRooms" Margin="1" TextWrapping="Wrap" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="15" Foreground="Red"></TextBlock>
+        </StackPanel>
+        <Button x:Name="btnRefresh" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Britannic Bold" FontSize="24" Width="284" Height="56" Click="btnRefresh_Click">
+            <StackPanel>
+                <TextBlock HorizontalAlignment="Center">Refresh</TextBlock>
+                <TextBlock FontSize="18" Foreground="Red" HorizontalAlignment="Center">Auto Refresh every 15 seconds</TextBlock>
+            </StackPanel>
+        </Button>
+        <Button x:Name="btnJoin" Content="Join" Grid.Column="1" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Britannic Bold" FontSize="35" Width="284" Height="59" Click="btnJoin_Click"/>
+
+    </Grid>
+</Window>

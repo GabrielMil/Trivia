@@ -1,0 +1,44 @@
+﻿<Window x:Class="Client.Windows.GameWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Client.Windows"
+        mc:Ignorable="d"
+        Title="GameWindow" Height="700" Width="850"
+        WindowStartupLocation="CenterScreen">
+    <Grid x:Name="gridMain">
+        <Grid.Background>
+            <ImageBrush ImageSource="/Windows/background blue digital.jpg"></ImageBrush>
+        </Grid.Background>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width=".5*"></ColumnDefinition>
+            <ColumnDefinition Width="2*"></ColumnDefinition>
+            <ColumnDefinition Width=".5*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="70"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <TextBlock x:Name="txtUsername" Margin="5" TextWrapping="Wrap" HorizontalAlignment="Left" FontSize="20" Foreground="AliceBlue"></TextBlock>
+        <TextBlock x:Name="txtRoomName" Grid.Column="1" Margin="5" TextWrapping="Wrap" HorizontalAlignment="Center" FontSize="20" Foreground="AliceBlue"></TextBlock>
+        <Button x:Name="btnExit" Grid.Column="2" Margin="0,10,10,0" FontSize="25" Content="Exit" FontWeight="DemiBold" HorizontalAlignment="Right" HorizontalContentAlignment="Center" VerticalAlignment="Top" Padding="7,3,7,3" Height="39" Width="93" FlowDirection="RightToLeft" Foreground="Black" Background="Red" Click="btnExit_Click" />
+
+        <TextBlock x:Name="txtCorrectAns" Grid.Row="1" Grid.Column="0" Margin="5" TextWrapping="Wrap" HorizontalAlignment="Center" FontSize="20" Foreground="AliceBlue"></TextBlock>
+        <TextBlock x:Name="txtTimeLeft" Grid.Row="1" Grid.Column="1" Margin="5" TextWrapping="Wrap" HorizontalAlignment="Center" FontSize="20" Foreground="AliceBlue"></TextBlock>
+        <TextBlock x:Name="txtAnswered" Grid.Row="1" Grid.Column="2" Margin="5" TextWrapping="Wrap" HorizontalAlignment="Center" FontSize="20" Foreground="AliceBlue"></TextBlock>
+
+        <TextBlock x:Name="txtQuestions" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3" Margin="5" TextWrapping="Wrap" HorizontalAlignment="Center" FontSize="20" Foreground="AliceBlue" MinWidth="800"></TextBlock>
+
+        <Button x:Name="btnAns1" Grid.Row="3" Grid.ColumnSpan="3" Margin="5" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Britannic Bold" FontSize="25" Background="LightGray" MinWidth="800" MinHeight="50" Click="btnAns1_Click"></Button>
+        <Button x:Name="btnAns2" Grid.Row="4" Grid.ColumnSpan="3" Margin="5" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Britannic Bold" FontSize="25" Background="LightGray" MinWidth="800" MinHeight="50" Click="btnAns2_Click"></Button>
+        <Button x:Name="btnAns3" Grid.Row="5" Grid.ColumnSpan="3" Margin="5" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Britannic Bold" FontSize="25" Background="LightGray" MinWidth="800" MinHeight="50" Click="btnAns3_Click"></Button>
+        <Button x:Name="btnAns4" Grid.Row="6" Grid.ColumnSpan="3" Margin="5" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Britannic Bold" FontSize="25" Background="LightGray" MinWidth="800" MinHeight="50" Click="btnAns4_Click"></Button>
+    </Grid>
+</Window>
